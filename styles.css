@@ -1,0 +1,236 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #121212, #1a1a1a); /* Dark gradient for header */
+    color: white;
+    padding: 20px 0;
+    animation: slideIn 1s ease-out;
+}
+
+.navbar .logo {
+    font-size: 28px;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 20px;
+    color: #4169E1; /* Royal Blue for logo */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+.navbar ul li {
+    margin-left: 30px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #4169E1; /* Royal Blue on hover */
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #4169E1, #1a237e); /* Gradient for hero section */
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
+}
+
+.hero .btn {
+    background: #121212; /* Dark background for the button */
+    color: #4169E1; /* Royal Blue for text */
+    padding: 12px 30px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #fff; /* White background on hover */
+    color: #4169E1; /* Royal Blue text on hover */
+    transform: scale(1.1);
+}
+
+/* Section Styles */
+section {
+    padding: 50px 20px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.about, .skills, .projects, .contact {
+    background-color: #1a1a1a; /* Dark gray for section background */
+    margin: 20px 0;
+    text-align: center;
+    padding: 50px;
+    opacity: 0;
+    animation: fadeInUp 1s ease-in forwards;
+    border-radius: 10px; /* Rounded corners for sections */
+}
+
+/* Skills Section */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.skill {
+    background: #4169E1; /* Royal Blue for skills */
+    color: white;
+    padding: 15px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+    font-size: 18px;
+    position: relative;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+    background: #fff;
+    color: #4169E1;
+}
+
+.skill::after {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    visibility: hidden;
+}
+
+.skill:hover::after {
+    visibility: visible;
+    background-image: url(attr(data-img url));
+}
+
+/* Projects Section */
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.project {
+    background: #222; /* Darker background for project cards */
+    padding: 20px;
+    border: 1px solid #444;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+    transition: transform 0.3s ease;
+    border-radius: 10px; /* Rounded corners for project cards */
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Contact Form */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.contact form input, .contact form textarea {
+    padding: 12px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333; /* Dark input background */
+    color: white;
+}
+
+.contact form button {
+    background: #4169E1; /* Royal Blue button */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 18px;
+}
+
+.contact form button:hover {
+    background: #fff;
+    color: #4169E1; /* Royal Blue text on hover */
+}
+
+footer {
+    text-align: center;
+    background: #121212; /* Dark footer background */
+    color: white;
+    padding: 20px 0;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,91 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pruthviraj's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">Pruthviraj Kammar</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm Pruthviraj</h1>
+            <p>A passionate Web Developer</p>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>I am a fresher frontend developer with a passion for creating interactive and visually appealing web applications. I enjoy solving problems and constantly learning new technologies to improve my craft.</p>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill" data-img="images/react.png">React</div>
+            <div class="skill" data-img="images/javascript.png">JavaScript</div>
+            <div class="skill" data-img="images/html.png">HTML</div>
+            <div class="skill" data-img="images/css.png">CSS</div>
+            <div class="skill" data-img="images/github.png">GitHub</div>
+            <div class="skill" data-img="images/tailwind.png">Tailwind CSS</div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project-container">
+            <div class="project">
+                <img src="music-app.jpg" alt="Music App" class="project-image">
+                <h3>Music Sharing and Streaming Website</h3>
+                <p>A music app created with React, MongoDB, Express.js, and Node.js</p>
+            </div>
+            <div class="project">
+                <img src="airbnb-clone.jpg" alt="Airbnb Clone" class="project-image">
+                <h3>Airbnb Clone</h3>
+                <p>A travel website created using React and Tailwind CSS</p>
+            </div>
+            <div class="project">
+                <img src="portfolio.jpg" alt="Portfolio Website" class="project-image">
+                <h3>Portfolio Website</h3>
+                <p>A responsive portfolio website built with HTML, CSS, and JavaScript</p>
+            </div>
+            <div class="project">
+                <img src="otp-generation.jpg" alt="OTP Generation" class="project-image">
+                <h3>OTP Generation</h3>
+                <p>A simple OTP generator built using JavaScript</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Pruthviraj. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
+
+
